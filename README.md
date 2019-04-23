@@ -5,9 +5,9 @@ The repository contains examples explain the key features of using MapR Data Sci
 
 1. [Introducing the MapR Data Science Refinery](https://mapr.com/blog/introducing-mapr-data-science-refinery/)
 1. [MapR Data Science Refinery configuration options](doc/tutorials/001-configuration.md)
-1. [Zeppelin's interpreters, how to configure and use]()
-1. [Zeppelin's notebooks, accessing and creating]()
-1. [Visualization in MapR Data Science Refinery]()
+1. [Zeppelin's interpreters, how to configure and use](doc/tutorials/002-interpreters.md)
+1. [Zeppelin's notebooks, accessing and creating](doc/tutorials/003-notebooks-accessing-creating.md)
+1. [Visualization in MapR Data Science Refinery](doc/tutorials/004-visualization.md)
 1. [Use cases. How to use Data Science Refinery to access the different backend engines]()
 	- [Running Shell Commands]()   
 	- [Running Pig Scripts]()
