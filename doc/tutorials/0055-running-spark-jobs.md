@@ -4,6 +4,6 @@ The Zeppelin notebook for this section shows how to run Apache Spark jobs using 
 
 > Note: The examples in this section use Hadoop commands to access files in MapR Filesystem. If you have a MapR Filesystem mount point in your container, you can replace the Hadoop commands with standard shell commands. Refer to Running Shell Commands in Zeppelin for an example of how to do this.
 
-To run the notebook (Running Spark Jobs in Zeppelin)[notebook/Running Spark Jobs in Zeppelin.json] just import it to the Zeppelin, click on  `Import note:` button and select the JSON file or put the link to the notebook:
+To run the notebook [Running Spark Jobs in Zeppelin](notebook/running-spark-jobs-in-zeppelin.json) just import it to the Zeppelin, click on  `Import note:` button and select the JSON file or put the link to the notebook:
 
-![import Zeppelin notebook](doc/tutorials/images/zeppelin-import.png)
+![import Zeppelin notebook](images/zeppelin-import.png)
