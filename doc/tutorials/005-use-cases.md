@@ -1,7 +1,7 @@
 # Use cases. How to use Data Science Refinery to access the different backend engines
 This section contains examples of how to use Apache Zeppelin interpreters to access the different backend engines. This includes running Apache Pig scripts, Apache Drill queries, Apache Hive queries, and Apache Spark jobs, as well as accessing MapR Database and MapR Event Store For Apache Kafka.
 
-1. [Running Shell Commands in Zeppelin]()
+1. [Running Shell Commands in Zeppelin](doc/tutorials/0051-shell-commands.md)
 This section shows you how to access files in your local file system and MapR Filesystem by using shell commands in your Apache Zeppelin notebook.
 1. [Running Pig Scripts in Zeppelin]()
 This section contains a sample of an Apache Pig script that you can run in your Apache Zeppelin notebook.
@@ -9,7 +9,7 @@ This section contains a sample of an Apache Pig script that you can run in your 
 This section contains samples of Apache Drill queries that you can run in your Apache Zeppelin notebook.
 1. [Running Hive Queries in Zeppelin]()
 This section contains samples of Apache Hive queries that you can run in your Apache Zeppelin notebook.
-1. [Running Spark Jobs in Zeppelin]()
+1. [Running Spark Jobs in Zeppelin](doc/tutorials/0055-running-spark-jobs.md)
 This section contains code samples for different types of Apache Spark jobs that you can run in your Apache Zeppelin notebook. You can run these examples using either the Livy or Spark interpreter.
 1. [Running MapR Database Shell Commands in Zeppelin]()
 This section contains a sample of MapR Database shell commands that you can run in your Apache Zeppelin notebook.
