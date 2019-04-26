@@ -28,3 +28,10 @@ The MapR Database Shell interpreter allows you to run commands available in [Map
 
 #### Unsupported Zeppelin Interpreters
 Apache Zeppelin on MapR does not support the HBase interpreter. To access MapR Database binary tables, use the [MapR Database Binary Connector for Apache Spark](https://mapr.com/docs/61/Spark/SparkHBaseConnector.html#concept_gth_txm_gz) with either the Livy or Spark interpreter.
+
+
+#### Writing a New Interpreter
+
+You are able to write your own interpreter. Creating a new interpreter is quite simple. Just extend `org.apache.zeppelin.interpreter` abstract class and implement some methods. 
+
+The whole [instruction](https://zeppelin.apache.org/docs/0.8.1/development/writing_zeppelin_interpreter.html) about how to write a new interpreter.
