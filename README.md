@@ -19,7 +19,7 @@ The repository contains examples explain the key features of using MapR Data Sci
 	- [Accessing MapR Database in Zeppelin Using the MapR Database OJAI Connector]()
 	- [Accessing MapR Event Store For Apache Kafka in Zeppelin Using the Livy Interpreter]()    
 	- [Accessing MapR Event Store For Apache Kafka in Zeppelin Using the Spark Interpreter]()
-1. [How to install custom packages (Tensorflow)](006-how-to-install-custom-packages.md)
+1. [How to install custom packages (Tensorflow)](doc/tutorials/006-how-to-install-custom-packages.md)
     - [Training model example]() 
 1. [Sharing Zeppelin Notebook](doc/tutorials/007-sharing-zeppelin-notebook.md)
 1. [Building your own MapR Data Science Refinery Docker Image](doc/tutorials/008-building-your-own-mdsr-image.md)
