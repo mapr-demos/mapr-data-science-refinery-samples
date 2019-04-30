@@ -69,7 +69,7 @@ Path in the filisystem`/opt/<user>/zeppelin/zeppelin-<version>/notebook/2C57UKYW
 
 
 <details> 
-  <summary>$MapR Data Science Refinery Tutorials</summary>
+  <summary>MapR Data Science Refinery Tutorials</summary>
 
 ![MapR Data Science Refinery](doc/tutorials/images/welcome_zeppelin.png)
 
