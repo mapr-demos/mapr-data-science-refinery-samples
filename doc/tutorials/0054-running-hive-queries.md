@@ -4,7 +4,7 @@ This section contains samples of Apache Hive queries that you can run in your Ap
 
 [Apache Hive](https://hive.apache.org/) data warehouse software facilitates reading, writing, and managing large datasets residing in distributed storage using SQL. Structure can be projected onto data already in storage. A command line tool and JDBC driver are provided to connect users to Hive.
 
-Before running Hive queries, make sure you have [configured the Hive JDBC interpreter](https://mapr.com/docs/61/Zeppelin/ConfigureJDBCInterpreter.html#concept_b5l_xdk_qbb__section_a5z_d2k_qbb). 
+**Note!** Before running Hive queries, make sure you have [configured the Hive JDBC interpreter](https://mapr.com/docs/61/Zeppelin/ConfigureJDBCInterpreter.html#concept_b5l_xdk_qbb__section_a5z_d2k_qbb). 
 
 Also, see [MapR Data Science Refinery Support by MapR Core Version](https://mapr.com/docs/61/DataScienceRefinery/DSRSupportByCoreVersion.html) for limitations when connecting to a secure MapR 6.1 cluster.
 

@@ -91,7 +91,6 @@ Path in the filisystem`/opt/<user>/zeppelin/zeppelin-<version>/notebook/2A94M5J1
 
 > If for some reason you can't find the default notebook for Spark SQL. The example located by path `notebooks/running-spark-sql-jobs-in-zeppelin.json`
 
-
 ### About the dataset
 
 ```
