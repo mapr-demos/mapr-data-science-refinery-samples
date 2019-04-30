@@ -17,7 +17,7 @@ To install custom packages for Python 2 (or Python 3) using Conda, you must crea
 
 One of the great advantages of MapR-FS is the ability to mount your global file namespace as a Direct NFS mount on your local file system. What this means for machine learning libraries is that they can interact directly with the data in the cluster without needing to be distributed via an execution engine like Spark or limited by compatibility with HDFS.
 
-![MapR Data Science Refinery Architeture](doc/tutorials/images/ml-ibraries.png)
+![MapR Data Science Refinery Architeture](images/ml-libraries.png)
 
 The MapR Data Science Refinery container includes a FUSE-based MapR POSIX Client, optimized for containers, that allows deep learning libraries to read and write data directly to MapR-FS.
 
@@ -41,7 +41,7 @@ print sess.run(hello)
 
 You should see the following result:
 
-![MapR Data Science Refinery Architeture](doc/tutorials/images/tensorflow-hello-word.png)
+![MapR Data Science Refinery Architeture](images/tensorflow-hello-word.png)
 
 In order to access TensorBoard, you need to simply add the port mapping to Docker Run as such:
 

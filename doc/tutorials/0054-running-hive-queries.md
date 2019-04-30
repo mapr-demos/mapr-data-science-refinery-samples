@@ -113,7 +113,7 @@ The notebook for this section you can run just import it to the Zeppelin, click 
 <details> 
   <summary>Import Zeppelin notebook</summary>
   
-![Import Zeppelin notebook](doc/tutorials/images/zeppelin-import.png)
+![Import Zeppelin notebook](images/zeppelin-import.png)
 
 </details>
 

@@ -16,7 +16,7 @@ This section contains samples of an Apache Pig scripts that you can run in your 
 
 ### Example
 
->How to perform these actions using Spark SQL in Zeppelin look to the section about [Running Spark Jobs in Zeppelin](doc/tutorials/0055-running-spark-jobs.md).
+>How to perform these actions using Spark SQL in Zeppelin look to the section about [Running Spark Jobs in Zeppelin](0055-running-spark-jobs.md).
 
 **pig**
 
@@ -73,7 +73,7 @@ Path in the filisystem`/opt/<user>/zeppelin/zeppelin-<version>/notebook/2C57UKYW
 <details> 
   <summary>MapR Data Science Refinery Tutorials</summary>
 
-![MapR Data Science Refinery](doc/tutorials/images/welcome_zeppelin.png)
+![MapR Data Science Refinery](images/welcome_zeppelin.png)
 
 </details>
 

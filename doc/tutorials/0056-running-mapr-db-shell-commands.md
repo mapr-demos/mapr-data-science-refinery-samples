@@ -51,10 +51,10 @@ The query returns the following:
 <details> 
   <summary>Import Zeppelin notebook</summary>
   
-![Import Zeppelin notebook](doc/tutorials/images/zeppelin-import.png)
+![Import Zeppelin notebook](images/zeppelin-import.png)
 
 </details> 
 
-.The notebook [Running MapR DB Shell Commands](notebook/running-mapr-db-shell-commands.json) is describing this section.
+The notebook [Running MapR DB Shell Commands](notebook/running-mapr-db-shell-commands.json) is describing this section.
 
 > The example of running MapR Database shell commands you can find in the official [MapR Data Science Refinery documentation](https://mapr.com/docs/61/Zeppelin/ZeppelinMapRDBShell.html) 
