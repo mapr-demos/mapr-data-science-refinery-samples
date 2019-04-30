@@ -29,7 +29,7 @@ This section contains samples of Apache Hive queries that you can run in your Ap
 1. [Running Spark Jobs in Zeppelin](doc/tutorials/0055-running-spark-jobs.md) <br/>
 This section contains code samples for different types of Apache Spark jobs that you can run in your Apache Zeppelin notebook. You can run these examples using either the Livy or Spark interpreter.
 
-1. [Running MapR Database Shell Commands in Zeppelin]() <br/>
+1. [Running MapR Database Shell Commands in Zeppelin](doc/tutorials/0056-running-mapr-db-shell-commands.md) <br/>
 This section contains a sample of MapR Database shell commands that you can run in your Apache Zeppelin notebook.
 
 1. [Accessing MapR Database in Zeppelin Using the MapR Database Binary Connector]() <br/>

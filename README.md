@@ -14,7 +14,7 @@ The repository contains examples explain the key features of using MapR Data Sci
 	- [Running Drill Queries]()
 	- [Running Hive Queries](doc/tutorials/0054-running-hive-queries.md)
 	- [Running Spark Jobs](doc/tutorials/0055-running-spark-jobs.md)
-    - [Running MapR Database Shell Commands]()
+    - [Running MapR Database Shell Commands](doc/tutorials/0056-running-mapr-db-shell-commands.md)
 	- [Accessing MapR Database in Zeppelin Using the MapR Database Binary Connector]()
 	- [Accessing MapR Database in Zeppelin Using the MapR Database OJAI Connector]()
 	- [Accessing MapR Event Store For Apache Kafka in Zeppelin Using the Livy Interpreter]()    
