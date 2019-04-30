@@ -3,7 +3,7 @@ This section contains examples of how to use Apache Zeppelin interpreters to acc
 
 1. [Running Shell Commands in Zeppelin](doc/tutorials/0051-shell-commands.md)
 This section shows you how to access files in your local file system and MapR Filesystem by using shell commands in your Apache Zeppelin notebook.
-1. [Running Pig Scripts in Zeppelin]()
+1. [Running Pig Scripts in Zeppelin](doc/tutorials/0052-pig-scripts.md)
 This section contains a sample of an Apache Pig script that you can run in your Apache Zeppelin notebook.
 1. [Running Drill Queries in Zeppelin]()
 This section contains samples of Apache Drill queries that you can run in your Apache Zeppelin notebook.

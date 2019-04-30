@@ -10,7 +10,7 @@ The repository contains examples explain the key features of using MapR Data Sci
 1. [Visualization in MapR Data Science Refinery](doc/tutorials/004-visualization.md)
 1. [Use cases. How to use Data Science Refinery to access the different backend engines](doc/tutorials/005-use-cases.md)
 	- [Running Shell Commands](doc/tutorials/0051-shell-commands.md)   
-	- [Running Pig Scripts]()
+	- [Running Pig Scripts](doc/tutorials/0052-pig-scripts.md)
 	- [Running Drill Queries]()
 	- [Running Hive Queries](doc/tutorials/0054-running-hive-queries.md)
 	- [Running Spark Jobs](doc/tutorials/0055-running-spark-jobs.md)
@@ -24,7 +24,7 @@ The repository contains examples explain the key features of using MapR Data Sci
 1. [Sharing Zeppelin Notebook](doc/tutorials/007-sharing-zeppelin-notebook.md)
 1. [Building your own MapR Data Science Refinery Docker Image](doc/tutorials/008-building-your-own-mdsr-image.md)
 1. [Troubleshooting Zeppelin](doc/tutorials/009-troubleshooting-zeppelin.md)
-1. [The official MapR Data Science Refinery  documentation](https://mapr.com/docs/61/DataScienceRefinery/DataScienceRefineryOverview.html)
+1. [The official MapR Data Science Refinery documentation](https://mapr.com/docs/61/DataScienceRefinery/DataScienceRefineryOverview.html)
 
 
 ### Prerequisites

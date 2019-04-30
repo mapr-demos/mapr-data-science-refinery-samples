@@ -26,7 +26,7 @@ docker run -it \                                                                
 --device /dev/fuse \                                                            # .
 -e MAPR_MOUNT_PATH=/mapr/ \                                                     # .
 -e ZEPPELIN_SSL_PORT=9996 -p 9996:9996 \                                        # Zeppelin port
---network=bridge \                                                              # --network=bridge
+--network=bridge \                                                              #
 --add-host=<host-name>:<host-ip> --add-host=<host-name>:<host-ip> \             # . add cluster nodes to /etc/hosts of container
 -p 10000-10010:10000-10010 \                                                    # options to make livy interpreter works with --network=bridge
 -e HOST_IP=<docker-host-ip> \                                                   # .
