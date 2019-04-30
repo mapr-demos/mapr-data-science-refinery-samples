@@ -16,6 +16,8 @@ This section contains samples of an Apache Pig scripts that you can run in your 
 
 ### Example
 
+>How to perform these actions using Spark SQL in Zeppelin look to the section about [Running Spark Jobs in Zeppelin](doc/tutorials/0055-running-spark-jobs.md).
+
 **pig**
 
 ```
@@ -40,7 +42,7 @@ b = group bank_data by age;
 foreach b generate group, COUNT($1);
 ```
 
-The same as above, but use dynamic text form so that use can specify the variable maxAge in the textbox. (See screenshot below). Dynamic form is a very cool feature of Zeppelin, you can refer to this link) for details.
+The same as above, but use dynamic text form so that use can specify the variable maxAge in the textbox. Dynamic form is a very cool feature of Zeppelin, you can refer to this link) for details.
 
 ```
 %pig.query
@@ -50,7 +52,7 @@ b = group bank_data by age;
 foreach b generate group, COUNT($1) as count;
 ```
 
-Get the number of each age for specific marital type, also use the dynamic form here. User can choose the marital type in the dropdown list (see screenshot below).
+Get the number of each age for specific marital type, also use the dynamic form here. User can choose the marital type in the dropdown list.
 
 ```
 %pig.query
