@@ -85,12 +85,12 @@ for (i <- 1 to 1000) {
 
 Wait until this consumer session is initialized and running. The following sample output in your notebook indicates the session is running:
 
-![MapR Data Science Refinery Architeture](doc/tutorials/images/event-store-kafka-consumer-spark.png)
+![Consumer output](doc/tutorials/images/event-store-kafka-consumer-spark.png)
 
 5. Run the producer notebook from Step 3.
 The consumer notebook displays the following sample output after you run the producer:
 
-![MapR Data Science Refinery Architeture](doc/tutorials/images/event-store-kafka-producer-spark.png.png)
+![Producer output](doc/tutorials/images/event-store-kafka-producer-spark.png)
 
 
 The prepared Zeppelin notebooks for this section:
