@@ -41,5 +41,5 @@ This section contains examples of Apache Spark jobs that use the MapR Database O
 1. [Accessing MapR Event Store For Apache Kafka in Zeppelin Using the Livy Interpreter]() <br/>
 This section contains a MapR Event Store For Apache Kafka streaming example that you can run in your Apache Zeppelin notebook using the Livy interpreter.
 
-1. [Accessing MapR Event Store For Apache Kafka in Zeppelin Using the Spark Interpreter]() <br/>
+1. [Accessing MapR Event Store For Apache Kafka in Zeppelin Using the Spark Interpreter](doc/tutorials/00510-event-store-kafka-using-spark.md) <br/>
 This section contains a MapR Event Store For Apache Kafka streaming example that you can run in your Apache Zeppelin notebook using the Spark interpreter. 
