@@ -1,6 +1,6 @@
-# Accessing MapR Event Store For Apache Kafka in Zeppelin Using the Spark Interpreter
+# ccessing MapR Event Store For Apache Kafka in Zeppelin Using the Livy Interpreter
 
-This section contains a MapR Event Store For Apache Kafka streaming example that you can run in your Apache Zeppelin notebook using the Spark interpreter. 
+This section contains a MapR Event Store For Apache Kafka streaming example that you can run in your Apache Zeppelin notebook using the Livy interpreter.
 
 > **Note:** See [MapR Data Science Refinery Support by MapR Core Version](https://mapr.com/docs/61/DataScienceRefinery/DSRSupportByCoreVersion.html) for limitations in version support when accessing MapR Event Store.
 
@@ -16,16 +16,16 @@ maprcli stream topic create -path /streaming_test/test_stream -topic test_topic
 
 When the stream and topic are available, perform the following actions in your notebook:
 
-1. [Configure the Spark interpreter](https://mapr.com/docs/61/Zeppelin/ConfigureSparkInterpreter.html#task_t1d_4yj_qbb). Make sure to follow the steps described in the Spark Jobs section to allow Spark jobs to run in parallel.
+1. [Configure the Livy interpreter.](https://mapr.com/docs/61/Zeppelin/ConfigureLivyInterpreter.html#task_t1d_4yj_qbb). Make sure to follow the steps described in the Spark Jobs section to allow Spark jobs to run in parallel.
 
-2. Create a streaming consumer in your notebook using the `%spark` interpreter:
+2. Create a streaming consumer in your notebook using the `%livy.spark` interpreter:
 
 ```
 import org.apache.kafka.clients.consumer.ConsumerConfig
 
 import org.apache.spark.SparkConf
 import org.apache.spark.streaming.{Seconds, StreamingContext}
-import org.apache.spark.streaming.kafka09.{ConsumerStrategies, KafkaUtils, LocationStrategies}        
+import org.apache.spark.streaming.kafka09.{ConsumerStrategies, KafkaUtils, LocationStrategies}    
 
 val ssc = new StreamingContext(sc, Seconds(1))
 
@@ -37,8 +37,8 @@ val kafkaParams = Map[String, String](
     "org.apache.kafka.common.serialization.StringDeserializer",
   ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG ->
     "org.apache.kafka.common.serialization.StringDeserializer",
-  ConsumerConfig.AUTO_OFFSET_RESET_CONFIG -> "latest",
-  ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG -> "false"
+  ConsumerConfig.AUTO_OFFSET_RESET_CONFIG -> "earliest",
+  ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG -> "false" 
 )
 
 val consumerStrategy =
@@ -54,10 +54,10 @@ val wordCounts = words.map(x => (x, 1L)).reduceByKey(_ + _)
 wordCounts.print()
 
 ssc.start()
-ssc.awaitTermination()
+ssc.awaitTerminationOrTimeout(3 * 60 * 1000)
 ```
 
-3. Create a streaming producer in another notebook, also with the `%spark` interpreter:
+3. Create a streaming producer in another notebook, also with the `%livy.spark` interpreter:
 
 ```
 import java.util.Properties
@@ -82,35 +82,46 @@ for (i <- 1 to 1000) {
 ```
 
 4. Start running the consumer notebook from Step 2.
-
-Wait until this consumer session is initialized and running. The following sample output in your notebook indicates the session is running:
+Wait until the Livy session in YARN for this consumer is initialized and running. You can determine this by locating the session in the YARN resource manager UI:
 
 <details> 
-  <summary>Consumer output</summary>
+  <summary>The YARN resource manager UI</summary>
   
-![Consumer output](doc/tutorials/images/event-store-kafka-consumer-spark.png)
+![the YARN resource manager UI](doc/tutorials/images/yurn-ui-livy.png)
 
 </details> 
 
+The URL for the YARN resource manager is one of the following:
 
-5. Run the producer notebook from Step 3.
-The consumer notebook displays the following sample output after you run the producer:
+Secure cluster:
 
-<details> 
-  <summary>Producer output</summary>
-  
-![Producer output](doc/tutorials/images/event-store-kafka-producer-spark.png)
+```
+https://<resource-manager-host>:8090
+```
 
-</details> 
+Non-secure cluster:
+
+```
+http://<resource-manager-host>:8088
+```
+
+5. Run the producer notebook from Step 3 several times.
+The consumer notebook has a three-minute timeout that was set by the following line:
+
+```
+ssc.awaitTerminationOrTimeout(3 * 60 * 1000)
+```
+
+You will see output in the consumer notebook after the timeout has expired.
 
 
 The prepared Zeppelin notebooks for this section:
 
-- [The consumer for accessing MapR Event Store for Kafka](notebook/consumer-event-store-for-kafka-use-spark.json)
-- [The producer for accessing MapR Event Store for Kafka](notebook/producer-event-store-for-kafka-use-spark.json)
+- [The consumer for accessing MapR Event Store for Kafka](notebook/consumer-event-store-for-kafka-use-livy.json)
+- [The producer for accessing MapR Event Store for Kafka](notebook/producer-event-store-for-kafka-use-livy.json)
 
 
-To run the notebooks  just import them to the Zeppelin, click on  `Import note:` button and select the JSON file or put the link to the notebook:
+To run the notebooks just import them to the Zeppelin, click on  `Import note:` button and select the JSON file or put the link to the notebook:
 
 <details> 
   <summary>Import Zeppelin notebook</summary>
