@@ -88,7 +88,7 @@ Wait until this consumer session is initialized and running. The following sampl
 <details> 
   <summary>Consumer output</summary>
   
-![Consumer output](doc/tutorials/images/event-store-kafka-consumer-spark.png)
+![Consumer output](images/event-store-kafka-consumer-spark.png)
 
 </details> 
 
@@ -99,7 +99,7 @@ The consumer notebook displays the following sample output after you run the pro
 <details> 
   <summary>Producer output</summary>
   
-![Producer output](doc/tutorials/images/event-store-kafka-producer-spark.png)
+![Producer output](images/event-store-kafka-producer-spark.png)
 
 </details> 
 
@@ -115,6 +115,6 @@ To run the notebooks  just import them to the Zeppelin, click on  `Import note:`
 <details> 
   <summary>Import Zeppelin notebook</summary>
   
-![Import Zeppelin notebook](doc/tutorials/images/zeppelin-import.png)
+![Import Zeppelin notebook](images/zeppelin-import.png)
 
 </details> 

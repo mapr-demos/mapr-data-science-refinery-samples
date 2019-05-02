@@ -1,4 +1,4 @@
-# ccessing MapR Event Store For Apache Kafka in Zeppelin Using the Livy Interpreter
+# Accessing MapR Event Store For Apache Kafka in Zeppelin Using the Livy Interpreter
 
 This section contains a MapR Event Store For Apache Kafka streaming example that you can run in your Apache Zeppelin notebook using the Livy interpreter.
 
@@ -87,7 +87,7 @@ Wait until the Livy session in YARN for this consumer is initialized and running
 <details> 
   <summary>The YARN resource manager UI</summary>
   
-![the YARN resource manager UI](doc/tutorials/images/yurn-ui-livy.png)
+![the YARN resource manager UI](images/yurn-ui-livy.png)
 
 </details> 
 
@@ -126,6 +126,6 @@ To run the notebooks just import them to the Zeppelin, click on  `Import note:` 
 <details> 
   <summary>Import Zeppelin notebook</summary>
   
-![Import Zeppelin notebook](doc/tutorials/images/zeppelin-import.png)
+![Import Zeppelin notebook](images/zeppelin-import.png)
 
 </details> 
