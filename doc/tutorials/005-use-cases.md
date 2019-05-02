@@ -38,7 +38,7 @@ This section contains an example of an Apache Spark job that uses the MapR Datab
 1. [Accessing MapR Database in Zeppelin Using the MapR Database OJAI Connector]() <br/>
 This section contains examples of Apache Spark jobs that use the MapR Database OJAI Connector for Apache Spark to read and write MapR Database JSON tables. The examples use the Spark Python interpreter. 
 
-1. [Accessing MapR Event Store For Apache Kafka in Zeppelin Using the Livy Interpreter]() <br/>
+1. [Accessing MapR Event Store For Apache Kafka in Zeppelin Using the Livy Interpreter](doc/tutorials/0059-event-store-kafka-using-livy.md) <br/>
 This section contains a MapR Event Store For Apache Kafka streaming example that you can run in your Apache Zeppelin notebook using the Livy interpreter.
 
 1. [Accessing MapR Event Store For Apache Kafka in Zeppelin Using the Spark Interpreter](doc/tutorials/00510-event-store-kafka-using-spark.md) <br/>

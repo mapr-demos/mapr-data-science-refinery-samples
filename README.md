@@ -17,7 +17,7 @@ The repository contains examples explain the key features of using MapR Data Sci
     - [Running MapR Database Shell Commands](doc/tutorials/0056-running-mapr-db-shell-commands.md)
 	- [Accessing MapR Database in Zeppelin Using the MapR Database Binary Connector](0057-)
 	- [Accessing MapR Database in Zeppelin Using the MapR Database OJAI Connector](0058-)
-	- [Accessing MapR Event Store For Apache Kafka in Zeppelin Using the Livy Interpreter](0059-)    
+	- [Accessing MapR Event Store For Apache Kafka in Zeppelin Using the Livy Interpreter](doc/tutorials/0059-event-store-kafka-using-livy.md)    
 	- [Accessing MapR Event Store For Apache Kafka in Zeppelin Using the Spark Interpreter](doc/tutorials/00510-event-store-kafka-using-spark.md)
 1. [How to install custom packages (Tensorflow)](doc/tutorials/006-how-to-install-custom-packages.md)
     - [Training model example]() 
