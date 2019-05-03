@@ -4,14 +4,13 @@ This section contains code samples for different types of Apache Spark jobs that
 
 >Before running these examples, depending on whether you are using the [Livy](https://mapr.com/docs/61/Zeppelin/ConfigureLivyInterpreter.html#task_t1d_4yj_qbb) or [Spark](https://mapr.com/docs/61/Zeppelin/ConfigureSparkInterpreter.html#task_t1d_4yj_qbb) interpreter, make sure you have configured the interpreter.
 
-The Zeppelin notebooks for this section shows how to run Apache Spark jobs using either the [Livy](https://mapr.com/docs/61/Zeppelin/ConfigureLivyInterpreter.html#task_t1d_4yj_qbb) or [Spark](https://mapr.com/docs/61/Zeppelin/ConfigureSparkInterpreter.html#task_t1d_4yj_qbb) interpreter.
-
-
 ### Example of using Spark SQL
 
->How to perform these actions using Pig in Zeppelin look to the section about [Pig](0052-pig-scripts.md).
+>How to perform the same actions using Pig in Zeppelin look to the section about [Pig](doc/tutorials/0052-pig-scripts.md).
 
-**Load data into table**
+<details> 
+  <summary>Load data into table</summary>
+
 ```
 %spark
 
@@ -41,7 +40,12 @@ val bank = bankText.map(s => s.split(";")).filter(s => s(0) != "\"age\"").map(
 bank.registerTempTable("bank")
 ```
 
-**Get the number of each age where age is less than 30**
+</details>
+
+[]()
+
+<details> 
+  <summary>Get the number of each age where age is less than 30</summary>
 
 ```
 %spark.sql 
@@ -53,7 +57,13 @@ group by age
 order by age
 ```
 
-**The same as above, but use dynamic text form so that use can specify the variable maxAge in the textbox. Dynamic form is a very cool feature of Zeppelin, you can refer to this link) for details.**
+</details>
+
+[]()
+
+
+<details> 
+  <summary>The same as above, but use dynamic text form so that use can specify the variable maxAge in the textbox. Dynamic form is a very cool feature of Zeppelin, you can refer to this link) for details</summary>
 
 ```
 %spark.sql 
@@ -65,7 +75,14 @@ group by age
 order by age
 ```
 
-**Get the number of each age for specific marital type, also use the dynamic form here. User can choose the marital type in the dropdown list.**
+</details>
+
+[]()
+
+
+
+<details> 
+  <summary>Get the number of each age for specific marital type, also use the dynamic form here. User can choose the marital type in the dropdown list</summary>
 
 ```
 %spark.sql 
@@ -77,19 +94,22 @@ group by age
 order by age
 ```
 
-The notebook for this section you can find in `Zeppelin Tutorial/Spark • Basic Features (Spark)` folder. 
-
-Path in the filisystem`/opt/<user>/zeppelin/zeppelin-<version>/notebook/2A94M5J1Z`
-
-<details> 
-  <summary>MapR Data Science Refinery Tutorials</summary>
-
-![MapR Data Science Refinery](images/welcome_zeppelin.png)
-
 </details>
 
+[]()
 
-> If for some reason you can't find the default notebook for Spark SQL. The example located by path `notebooks/running-spark-sql-jobs-in-zeppelin.json`
+
+The prepared notebook for this section is ready to be imported to your MapR DSR. 
+
+Click on `Import note:` button and select the JSON file `running-spark-sql-jobs-in-zeppelin.json` or put the link to it. 
+
+<details> 
+  <summary>Details</summary>
+  
+![Import Zeppelin notebook](doc/tutorials/images/zeppelin-import.png)
+
+</details> 
+
 
 ### About the dataset
 

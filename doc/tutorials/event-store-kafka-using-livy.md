@@ -4,6 +4,8 @@ This section contains a MapR Event Store For Apache Kafka streaming example that
 
 > **Note:** See [MapR Data Science Refinery Support by MapR Core Version](https://mapr.com/docs/61/DataScienceRefinery/DSRSupportByCoreVersion.html) for limitations in version support when accessing MapR Event Store.
 
+[Configure the Livy interpreter](https://mapr.com/docs/61/Zeppelin/ConfigureLivyInterpreter.html#task_t1d_4yj_qbb). Make sure to follow the steps described in the Spark Jobs section to allow Spark jobs to run in parallel.
+
 The example references a stream named `test_stream` created in the path `/streaming_test/test_stream`. The stream contains a topic called `test_topic`. You can use the following commands to create this stream and topic, but you cannot run them in Zeppelin; they must be run in a MapR cluster.
 
 ```
@@ -14,11 +16,10 @@ maprcli stream create -path /streaming_test/test_stream
 maprcli stream topic create -path /streaming_test/test_stream -topic test_topic
 ```
 
-When the stream and topic are available, perform the following actions in your notebook:
+**When the stream and topic are available, perform the following actions in your notebook:**
 
-1. [Configure the Livy interpreter.](https://mapr.com/docs/61/Zeppelin/ConfigureLivyInterpreter.html#task_t1d_4yj_qbb). Make sure to follow the steps described in the Spark Jobs section to allow Spark jobs to run in parallel.
-
-2. Create a streaming consumer in your notebook using the `%livy.spark` interpreter:
+<details> 
+  <summary>Create a streaming consumer in your notebook using the %livy.spark interpreter:</summary>
 
 ```
 import org.apache.kafka.clients.consumer.ConsumerConfig
@@ -57,7 +58,13 @@ ssc.start()
 ssc.awaitTerminationOrTimeout(3 * 60 * 1000)
 ```
 
-3. Create a streaming producer in another notebook, also with the `%livy.spark` interpreter:
+</details>
+
+[]()
+
+
+<details> 
+  <summary>Create a streaming producer in another notebook, also with the %livy.spark interpreter:</summary>
 
 ```
 import java.util.Properties
@@ -81,15 +88,19 @@ for (i <- 1 to 1000) {
 }
 ```
 
-4. Start running the consumer notebook from Step 2.
-Wait until the Livy session in YARN for this consumer is initialized and running. You can determine this by locating the session in the YARN resource manager UI:
+</details>
+
+[]()
+
 
 <details> 
-  <summary>The YARN resource manager UI</summary>
+  <summary>Start running the consumer notebook. Wait until the Livy session in YARN for this consumer is initialized and running. You can determine this by locating the session in the YARN resource manager UI:</summary>
   
 ![the YARN resource manager UI](images/yurn-ui-livy.png)
 
 </details> 
+
+[]()
 
 The URL for the YARN resource manager is one of the following:
 
@@ -105,7 +116,7 @@ Non-secure cluster:
 http://<resource-manager-host>:8088
 ```
 
-5. Run the producer notebook from Step 3 several times.
+**Run the producer notebook several times.***
 The consumer notebook has a three-minute timeout that was set by the following line:
 
 ```
@@ -115,16 +126,12 @@ ssc.awaitTerminationOrTimeout(3 * 60 * 1000)
 You will see output in the consumer notebook after the timeout has expired.
 
 
-The prepared Zeppelin notebooks for this section:
+The prepared notebooks for this section is ready to be imported to your MapR DSR. 
 
-- [The consumer for accessing MapR Event Store for Kafka](notebook/consumer-event-store-for-kafka-use-livy.json)
-- [The producer for accessing MapR Event Store for Kafka](notebook/producer-event-store-for-kafka-use-livy.json)
-
-
-To run the notebooks just import them to the Zeppelin, click on  `Import note:` button and select the JSON file or put the link to the notebook:
+Click on `Import note:` button and select the JSON file `consumer-event-store-for-kafka-use-livy.json` and `producer-event-store-for-kafka-use-livy.json` or put the links to them. 
 
 <details> 
-  <summary>Import Zeppelin notebook</summary>
+  <summary>Details</summary>
   
 ![Import Zeppelin notebook](images/zeppelin-import.png)
 

@@ -16,9 +16,13 @@ This section contains samples of an Apache Pig scripts that you can run in your 
 
 ### Example
 
->How to perform these actions using Spark SQL in Zeppelin look to the section about [Running Spark Jobs in Zeppelin](0055-running-spark-jobs.md).
+>How to perform the same actions using Spark SQL in Zeppelin look to the section about [Running Spark Jobs in Zeppelin](doc/tutorials/running-spark-jobs.md).
 
-**pig**
+
+**pig - interpreter type**
+
+<details> 
+  <summary>Load and prepare data</summary>
 
 ```
 %pig
@@ -30,9 +34,15 @@ bank = foreach bank generate (int)age, REPLACE(job,'"','') as job, REPLACE(marit
 store bank into 'clean_bank.csv' using PigStorage(';'); -- this statement is optional, it just show you that most of time %pig.script is used for data munging before querying the data. 
 ```
 
-**pig.query**
+</details>
 
-Get the number of each age where age is less than 30
+[]()
+
+
+**pig.query - interpreter type**
+
+<details> 
+  <summary>Get the number of each age where age is less than 30</summary>
 
 ```
 %pig.query
@@ -42,7 +52,13 @@ b = group bank_data by age;
 foreach b generate group, COUNT($1);
 ```
 
-The same as above, but use dynamic text form so that use can specify the variable maxAge in the textbox. Dynamic form is a very cool feature of Zeppelin, you can refer to this link) for details.
+</details>
+
+[]()
+
+
+<details> 
+  <summary>The same as above, but use dynamic text form so that use can specify the variable maxAge in the textbox. Dynamic form is a very cool feature of Zeppelin, you can refer to this link) for details</summary>
 
 ```
 %pig.query
@@ -52,7 +68,13 @@ b = group bank_data by age;
 foreach b generate group, COUNT($1) as count;
 ```
 
-Get the number of each age for specific marital type, also use the dynamic form here. User can choose the marital type in the dropdown list.
+</details>
+
+[]()
+
+
+<details> 
+  <summary>Get the number of each age for specific marital type, also use the dynamic form here. User can choose the marital type in the dropdown list</summary>
 
 ```
 %pig.query
@@ -61,23 +83,25 @@ bank_data = filter bank by marital=='${marital=single,single|divorced|married}';
 b = group bank_data by age;
 foreach b generate group, COUNT($1) as count;
 ```
+</details>
+
+[]()
+
 
 Data is shared between `%pig` and `%pig.query`, so that you can do some common work in `%pig`, and do different kinds of query based on the data of `%pig`. Besides, we recommend you to specify alias explicitly so that the visualization can display the column name correctly. In the above example 2 and 3 of `%pig.query`, we name `COUNT($1) as count`. If you don't do this, then we will name it using position. E.g. in the above first example of `%pig.query`, we will use `col_1` in chart to represent `COUNT($1)`.
 
 
 The notebook for this section you can find is the `Zeppelin Tutorial/Using Pig for querying data` folder. 
 
-Path in the filisystem`/opt/<user>/zeppelin/zeppelin-<version>/notebook/2C57UKYWR`
-
-
 <details> 
-  <summary>MapR Data Science Refinery Tutorials</summary>
+  <summary>Using Pig for querying data</summary>
 
 ![MapR Data Science Refinery](images/welcome_zeppelin.png)
 
 </details>
 
 > If for some reason you can't find the default notebook for Pig. The also example located by path `notebooks/running-pig-scripts-in-zeppelin.json`
+
 
 ### About the dataset
 

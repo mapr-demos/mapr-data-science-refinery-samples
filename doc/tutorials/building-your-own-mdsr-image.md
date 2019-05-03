@@ -5,8 +5,8 @@ MapR provides a preconfigured and prepackaged Docker image for the MapR Data Sci
 Operating System	URL
 
 ```sh
-CentOS	- `https://package.mapr.com/labs/data-science-refinery/v1.3.2/redhat/`
-Ubuntu	- `https://package.mapr.com/labs/data-science-refinery/v1.3.2/ubuntu/`
+CentOS	- https://package.mapr.com/labs/data-science-refinery/v1.3.2/redhat/
+Ubuntu	- https://package.mapr.com/labs/data-science-refinery/v1.3.2/ubuntu/
 ```
 
 2. Download the Dockerfile corresponding to your OS:

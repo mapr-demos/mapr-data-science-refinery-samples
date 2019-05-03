@@ -81,7 +81,10 @@ df.show
 ```
 </details> 
 
-The output looks like the following:
+[]()
+
+<details> 
+  <summary>The output looks like the following:</summary>
 
 ```
 +----+--------------+-----+----+----+------+----+----+----+
@@ -109,6 +112,10 @@ The output looks like the following:
 |  19|String19 extra|false|19.0|  19|row019|  19|19.0|  19|
 +----+--------------+-----+----+----+------+----+----+----+
 ```
+
+</details>
+
+[]()
 
 
 <details> 
@@ -196,7 +203,12 @@ resRDD.collect().foreach(v => println(v))
 ```
 </details>
 
-The output looks like the following:
+[]()
+
+
+
+<details> 
+  <summary>The output looks like the following:</summary>
 
 ```
 5: (1,5)
@@ -206,7 +218,19 @@ The output looks like the following:
 1: (1,1)
 ```
 
+</details>
 
-The Zeppelin on MapR Tutorial also includes a notebook with Scala code examples using the MapR Database Binary Connector. 
+[]()
+
+
+The Zeppelin on MapR Tutorial includes a notebook with Scala code examples using the MapR Database Binary Connector. 
+
+<details> 
+  <summary>Spark MapR-DB Binary Connector (Scala)</summary>
+
+![MapR Data Science Refinery](doc/tutorials/images/welcome_zeppelin.png)
+
+</details>
+
 
 >See [MapR Database Binary Connector for Apache Spark](https://mapr.com/docs/61/Spark/SparkHBaseConnector.html#concept_gth_txm_gz) for additional information about this connector.

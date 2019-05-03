@@ -13,7 +13,8 @@ The Zeppelin notebook for this section contains sample of Apache Hive queries th
 
 ### Example
 
-**Download Spending Dataset**
+<details> 
+  <summary>Download Spending Dataset</summary>
 
 ```
 %sh
@@ -36,14 +37,26 @@ hadoop fs -ls -h /tmp/expenses.csv
 rm /tmp/expenses.csv
 ```
 
-**Dropping Hive table if exists**
+</details>
+
+[]()
+
+
+<details> 
+  <summary>Dropping Hive table if exists</summary>
 
 ```
 %hive
 drop table if exists `health_table`
 ```
 
-**Create Hive table**
+</details>
+
+[]()
+
+
+<details> 
+  <summary>Create Hive table</summary>
 
 ```
 %hive
@@ -58,7 +71,13 @@ CREATE TABLE `health_table` (
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TextFile
 ```
 
-**Load dataset into Hive table**
+</details>
+
+[]()
+
+
+<details> 
+  <summary>Load dataset into Hive table</summary>
 
 ```
 %hive
@@ -68,7 +87,13 @@ inpath '/tmp/expenses.csv'
 into table health_table
 ```
 
-**Grant permissions**
+</details>
+
+[]()
+
+
+<details> 
+  <summary>Grant permissions</summary>
 
 ```
 %hive
@@ -76,7 +101,14 @@ into table health_table
 select count(*) from  health_table 
 ```
 
-**Spending (In Billions) By State**
+</details>
+
+[]()
+
+
+
+<details> 
+  <summary>Spending (In Billions) By State</summary>
 
 ```
 %hive
@@ -87,7 +119,14 @@ group by state
 order by SpendinginBillions desc
 ```
 
-**Spending (In Billions) By Year**
+</details>
+
+[]()
+
+
+
+<details> 
+  <summary>Spending (In Billions) By Year</summary>
 
 ```
 %hive
@@ -98,7 +137,13 @@ group by year
 order by SpendinginBillions
 ```
 
-**Spending (In Billions) By Category**
+</details>
+
+[]()
+
+
+<details> 
+  <summary>Spending (In Billions) By Category</summary>
 
 ```
 %hive
@@ -108,16 +153,21 @@ group by category
 order by SpendinginBillions desc
 ```
 
-The notebook for this section you can run just import it to the Zeppelin, click on  `Import note:` button and select the JSON file or put the link to the notebook:
+</details>
+
+[]()
+
+
+The prepared notebook for this section is ready to be imported to your MapR DSR. 
+
+Click on `Import note:` button and select the JSON file `running-hive-queries-in-zeppelin.json` or put the link to it. 
 
 <details> 
-  <summary>Import Zeppelin notebook</summary>
+  <summary>Details</summary>
   
 ![Import Zeppelin notebook](images/zeppelin-import.png)
 
-</details>
-
-[The Running Hive Queries in Zeppelin](notebook/running-hive-queries-in-zeppelin.json) notebook.
+</details> 
 
 
 ### About the dataset

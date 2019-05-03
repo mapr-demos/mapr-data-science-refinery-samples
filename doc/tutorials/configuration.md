@@ -1,18 +1,20 @@
 # MapR Data Science Refinery configuration options
 
+In our tutorial, we will be running MapR Data Science Refinery from Docker image with Zeppelin PACC. 
+To pull and run the Docker image, you must first install [Docker](https://docs.docker.com/engine/installation/) on the host where you want to run the container.
+
 > To run the Apache Zeppelin container, you must access the Zeppelin Docker image from MapR’s public repository, 
 run the Docker image, and access the deployed container from your web browser. From your browser, you can create Zeppelin notebooks.
 
-In our tutorial we will be running MapR Data Science Refinery from Docker image with Zeppelin PACC. 
-To pull and run the Docker image, you must first install [Docker](https://docs.docker.com/engine/installation/) on the host where you want to run the container.
+Running a container with `docker run` command.
 
-Running a container with `docker run` command. Follow the link to understand all [Zeppelin Docker Parameters](https://mapr.com/docs/home/Zeppelin/ZeppelinDockerRunParameters.html)
+
 ##### Some common parameters needed to be configured 
 
 ```
 docker run -it \                                                                # docker run command
 -v /sys/fs/cgroup:/sys/fs/cgroup:ro \                                           # default Docker options
--e MAPR_CLDB_HOSTS=<docker-host-ip> \                                           # default PACC options
+-e MAPR_CLDB_HOSTS=<host-ip> \                                           	# default PACC options
 -e MAPR_CLUSTER=<cluster-name> \                                                # .
 -e MAPR_CONTAINER_USER=<user-name> \                                            # MapR security opyions
 -e MAPR_CONTAINER_UID=<uid> \                                                   # .
@@ -26,21 +28,23 @@ docker run -it \                                                                
 --device /dev/fuse \                                                            # .
 -e MAPR_MOUNT_PATH=/mapr/ \                                                     # .
 -e ZEPPELIN_SSL_PORT=9996 -p 9996:9996 \                                        # Zeppelin port
---network=bridge \                                                              #
---add-host=<host-name>:<host-ip> --add-host=<host-name>:<host-ip> \             # . add cluster nodes to /etc/hosts of container
+--network=bridge \                                                              # network=bridge
+--add-host=<host-name>:<host-ip> --add-host=<host-name>:<host-ip> \             # add cluster nodes to /etc/hosts of container
 -p 10000-10010:10000-10010 \                                                    # options to make livy interpreter works with --network=bridge
 -e HOST_IP=<docker-host-ip> \                                                   # .
--e MAPR_HS_HOST=<historyserver-ip> \                                            # options to make Pig interpreter works
+-e MAPR_HS_HOST=<history-server-ip> \                                           # options to make Pig interpreter works
 -v /tmp/hive-site.xml:/opt/mapr/spark/spark<version>/conf/hive-site.xml:ro \    # options to make Spark works with Hive
 maprtech/data-science-refinery                                                  # Docker image name
 ```
 
+Follow the link to understand all [Zeppelin Docker Parameters](https://mapr.com/docs/home/Zeppelin/ZeppelinDockerRunParameters.html).
 
+</br>
 
 <details> 
-  <summary>`docker run` command used for our tutorial</summary>
+  <summary>-- docker run -- command used for our tutorial configuration</summary>
   
-  ```
+```
   docker run -it \
 -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
 -e MAPR_CLDB_HOSTS=192.168.33.13 \
@@ -65,17 +69,15 @@ maprtech/data-science-refinery                                                  
 -e MAPR_HS_HOST=192.168.33.13 \
 -v /tmp/hive-site.xml:/opt/mapr/spark/spark-2.3.2/conf/hive-site.xml:ro \
 maprtech/data-science-refinery
-  ```
+```
+
 </details> 
 
-
-> After installing Docker, if you configure a memory limit, ensure that it is at least 3.5 GB of memory. Otherwise, you may not be able to start the Zeppelin container or may encounter log in problems.
-Ensure that container can resolve hostnames of cluster nodes.
-
+</br>
 
 #### Some useful commands for work with docker images and containers:
 
-1. To run existing container:
+1. To run an existing container:
 
 ```
 docker exec -it -u mapruser1 389b9b3 bash -l 
@@ -101,3 +103,7 @@ docker container list -q -a | xargs docker container rm
 ```
 docker cp /tmp/hive-site.xml 389b9b:/tmp/
 ```
+
+> **Note!** 
+>After installing Docker, if you configure a memory limit, ensure that it is at least 3.5 GB of memory. Otherwise, you may not be able to start the Zeppelin container or may encounter login problems.
+Ensure that container can resolve hostnames of cluster nodes.

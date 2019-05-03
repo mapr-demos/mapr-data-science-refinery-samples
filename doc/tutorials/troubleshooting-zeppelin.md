@@ -12,7 +12,7 @@ This section describes common problems you may encounter when using Apache Zeppe
 
 * [Unable to Access MapR Filesystem](https://mapr.com/docs/61/Zeppelin/TroubleshootingZeppelin.html#concept_lgq_gj4_5bb__section_cqs_qgc_1cb)
 
-* [`FileClient` Errors](https://mapr.com/docs/61/Zeppelin/TroubleshootingZeppelin.html#concept_lgq_gj4_5bb__section_a23_xgc_1cb)
+* [FileClient Errors](https://mapr.com/docs/61/Zeppelin/TroubleshootingZeppelin.html#concept_lgq_gj4_5bb__section_a23_xgc_1cb)
 
 * [Livy Errors when Using Bridge Networking](https://mapr.com/docs/61/Zeppelin/TroubleshootingZeppelin.html#concept_lgq_gj4_5bb__section_ulm_kvx_1cb)
 

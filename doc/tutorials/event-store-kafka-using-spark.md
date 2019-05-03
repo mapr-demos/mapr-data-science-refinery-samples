@@ -4,6 +4,8 @@ This section contains a MapR Event Store For Apache Kafka streaming example that
 
 > **Note:** See [MapR Data Science Refinery Support by MapR Core Version](https://mapr.com/docs/61/DataScienceRefinery/DSRSupportByCoreVersion.html) for limitations in version support when accessing MapR Event Store.
 
+[Configure the Spark interpreter](https://mapr.com/docs/61/Zeppelin/ConfigureSparkInterpreter.html#task_t1d_4yj_qbb). Make sure to follow the steps described in the Spark Jobs section to allow Spark jobs to run in parallel.
+
 The example references a stream named `test_stream` created in the path `/streaming_test/test_stream`. The stream contains a topic called `test_topic`. You can use the following commands to create this stream and topic, but you cannot run them in Zeppelin; they must be run in a MapR cluster.
 
 ```
@@ -14,11 +16,10 @@ maprcli stream create -path /streaming_test/test_stream
 maprcli stream topic create -path /streaming_test/test_stream -topic test_topic
 ```
 
-When the stream and topic are available, perform the following actions in your notebook:
+**When the stream and topic are available, perform the following actions in your notebook:**
 
-1. [Configure the Spark interpreter](https://mapr.com/docs/61/Zeppelin/ConfigureSparkInterpreter.html#task_t1d_4yj_qbb). Make sure to follow the steps described in the Spark Jobs section to allow Spark jobs to run in parallel.
-
-2. Create a streaming consumer in your notebook using the `%spark` interpreter:
+<details> 
+  <summary>Create a streaming consumer in your notebook using the %spark interpreter:</summary>
 
 ```
 import org.apache.kafka.clients.consumer.ConsumerConfig
@@ -57,7 +58,13 @@ ssc.start()
 ssc.awaitTermination()
 ```
 
-3. Create a streaming producer in another notebook, also with the `%spark` interpreter:
+</details>
+
+[]()
+
+
+<details> 
+  <summary>Create a streaming producer in another notebook, also with the %spark interpreter:</summary>
 
 ```
 import java.util.Properties
@@ -81,39 +88,36 @@ for (i <- 1 to 1000) {
 }
 ```
 
-4. Start running the consumer notebook from Step 2.
+</details>
 
-Wait until this consumer session is initialized and running. The following sample output in your notebook indicates the session is running:
+[]()
+
 
 <details> 
-  <summary>Consumer output</summary>
+  <summary>Start running the consumer notebook. Wait until this consumer session is initialized and running. The following sample output in your notebook indicates the session is running:</summary>
   
 ![Consumer output](images/event-store-kafka-consumer-spark.png)
 
 </details> 
 
+[]()
 
-5. Run the producer notebook from Step 3.
-The consumer notebook displays the following sample output after you run the producer:
 
 <details> 
-  <summary>Producer output</summary>
+  <summary>Run the producer notebook. The consumer notebook displays the following sample output after you run the producer:</summary>
   
 ![Producer output](images/event-store-kafka-producer-spark.png)
 
 </details> 
 
+[]()
 
-The prepared Zeppelin notebooks for this section:
+The prepared notebooks for this section is ready to be imported to your MapR DSR. 
 
-- [The consumer for accessing MapR Event Store for Kafka](notebook/consumer-event-store-for-kafka-use-spark.json)
-- [The producer for accessing MapR Event Store for Kafka](notebook/producer-event-store-for-kafka-use-spark.json)
-
-
-To run the notebooks  just import them to the Zeppelin, click on  `Import note:` button and select the JSON file or put the link to the notebook:
+Click on `Import note:` button and select the JSON file `consumer-event-store-for-kafka-use-spark.json` and `producer-event-store-for-kafka-use-spark.json` or put the links to them. 
 
 <details> 
-  <summary>Import Zeppelin notebook</summary>
+  <summary>Details</summary>
   
 ![Import Zeppelin notebook](images/zeppelin-import.png)
 
