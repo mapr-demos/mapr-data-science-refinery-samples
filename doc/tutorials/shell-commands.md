@@ -67,6 +67,6 @@ Click on `Import note:` button and select the JSON file `running-shell-commands-
 <details> 
   <summary>Details</summary>
   
-![Import Zeppelin notebook](doc/tutorials/images/zeppelin-import.png)
+![Import Zeppelin notebook](images/zeppelin-import.png)
 
 </details> 

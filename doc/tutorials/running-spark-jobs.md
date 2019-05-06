@@ -6,7 +6,7 @@ This section contains code samples for different types of Apache Spark jobs that
 
 ### Example of using Spark SQL
 
->How to perform the same actions using Pig in Zeppelin look to the section about [Pig](doc/tutorials/0052-pig-scripts.md).
+>How to perform the same actions using Pig in Zeppelin look to the section about [Pig](pig-scripts.md).
 
 <details> 
   <summary>Load data into table</summary>
@@ -106,7 +106,7 @@ Click on `Import note:` button and select the JSON file `running-spark-sql-jobs-
 <details> 
   <summary>Details</summary>
   
-![Import Zeppelin notebook](doc/tutorials/images/zeppelin-import.png)
+![Import Zeppelin notebook](images/zeppelin-import.png)
 
 </details> 
 
