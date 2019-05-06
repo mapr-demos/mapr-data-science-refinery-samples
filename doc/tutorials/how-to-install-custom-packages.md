@@ -55,3 +55,35 @@ And then launch TensorBoard using the external host IP:
 tensorboard --logdir /tmp/ --host 0.0.0.0
 TensorBoard 1.6.0 at http://0.0.0.0:6006 (Press CTRL+C to quit)
 ```
+
+>In some cases when launching `tensorboard --logdir /tmp/ --host 0.0.0.0` posible to get the error:
+
+<details> 
+  <summary>ImportError: No module named extern</summary>
+
+```
+$ tensorboard --logdir /tmp/ --host 0.0.0.0
+Traceback (most recent call last):
+  File "/bin/tensorboard", line 6, in <module>
+    from tensorboard.main import run_main
+  File "/usr/lib/python2.7/site-packages/tensorboard/main.py", line 44, in <module>
+    from tensorboard import default
+  File "/usr/lib/python2.7/site-packages/tensorboard/default.py", line 35, in <module>
+    from tensorboard.plugins.audio import audio_plugin
+  File "/usr/lib/python2.7/site-packages/tensorboard/plugins/audio/audio_plugin.py", line 25, in <module>
+    from tensorboard import plugin_util
+  File "/usr/lib/python2.7/site-packages/tensorboard/plugin_util.py", line 24, in <module>
+    import markdown
+  File "/usr/lib64/python2.7/site-packages/markdown/__init__.py", line 28, in <module>
+    from pkg_resources.extern import packaging
+ImportError: No module named extern
+```
+
+</details>
+
+[]()
+To solve this I installed `setuptools` additionally  
+
+```
+$ sudo pip install -U setuptools 
+```
